@@ -1,20 +1,21 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import "./App.css";
-import medicoImage from "./assets/imagem1.png";
-import imgCard1 from "./assets/imagemCard1.png";
-import imgCard2 from "./assets/imagemCard2.png";
-import imgCard3 from "./assets/imagemCard3.png";
-import imgDoutora from "./assets/doutora.png";
-import imgConsulta from "./assets/consulta.png";
-import imgIdosa from "./assets/idosa.png";
-import FixedContainer from "./components/shared/FixedContainer";
-import Card from "./components/shared/Card";
+import medicoImage from "../assets/imagem1.png";
+import imgCard1 from "../assets/imagemCard1.png";
+import imgCard2 from "../assets/imagemCard2.png";
+import imgCard3 from "../assets/imagemCard3.png";
+import imgDoutora from "../assets/doutora.png";
+import imgConsulta from "../assets/consulta.png";
+import imgIdosa from "../assets/idosa.png";
+import FixedContainer from "../components/shared/FixedContainer";
+import Navbar from "../components/shared/Navbar";
+import Card from "../components/shared/Card";
 import Divider from "@mui/material/Divider";
 
-function App() {
+export default function PrimaryPage() {
   return (
     <>
+      <Navbar />
       <FixedContainer>
         <Grid container spacing={2}>
           <Grid
@@ -70,12 +71,10 @@ function App() {
             <Card title="Consulta" imgSrc={imgConsulta} />
           </Grid>
           <Grid item display={"flex"} justifyContent={"center"} xs={4}>
-            <Card title="Pacientes" imgSrc={imgIdosa} link="/patients" textButton="Pesquisar pacientes" />
+            <Card title="Pacientes" imgSrc={imgIdosa} />
           </Grid>
         </Grid>
       </FixedContainer>
     </>
   );
 }
-
-export default App;

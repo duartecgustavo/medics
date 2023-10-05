@@ -5,6 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 export default function ImgMediaCard(props) {
   return (
@@ -25,7 +26,9 @@ export default function ImgMediaCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">{props.textButton || "Ler mais"}</Button>
+        <Link to={props.link}>
+          <Button size="small">{props.textButton || "Ler mais"}</Button>
+        </Link>
       </CardActions>
     </Card>
   );

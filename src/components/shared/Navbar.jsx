@@ -153,26 +153,28 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Box sx={{ display: { xs: "none", md: "flex", gap: "10px" } }}>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              MEDICS
-            </Typography>
-          </Box>
+          <a href='/' style={{ color: "white" }}>
+            <Box sx={{ display: { xs: "none", md: "flex", gap: "10px" }, align: "center" }}>
+              <AdbIcon sx={{ display: "flex", alignItems: "center" }} />
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="#app-bar-with-responsive-menu"
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                MEDICS
+              </Typography>
+            </Box>
+          </a>
 
           <Search sx={{ width: "50% !important" }}>
             <SearchIconWrapper>
@@ -183,6 +185,7 @@ export default function PrimarySearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
+
           <Box sx={{ display: { xs: "none", md: "flex", gap: "20px" } }}>
             <Typography variant="h5" gutterBottom>
               Sobre nós

@@ -1,18 +1,15 @@
 /* eslint-disable react/prop-types */
-import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 export default function FixedContainer(props) {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container sx={{ padding: "0px !important" }}>
-        <Box py={4} sx={{ bgcolor: "#cfe8fc", height: "auto", width: "100vw" }}>
+    <>
+      <Box py={4} sx={{ background: props.bgColor || "#cfe8fc", height: "auto", display: "flex", justifyContent: "center" }}>
+        <Container sx={{ padding: "0px !important", width: "100%", bgcolor: "#cfe8fc", justifyContent: "center", display: "flex" }}>
           {props.children}
-        </Box>
-      </Container>
-    </React.Fragment>
+        </Container>
+      </Box>
+    </>
   );
 }
